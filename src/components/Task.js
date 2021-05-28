@@ -1,10 +1,13 @@
 import React from "react";
 
-const Task = ({ name, value }) => {
+const Task = ({ value }) => {
   return (
     <div>
-      <input type="checkbox" name={name} />
-      <label for={name}>{value}</label>
+      <label className="container">
+        {value}
+        <input type="checkbox" />
+        <span className="checkmark"></span>
+      </label>
     </div>
   );
 };
