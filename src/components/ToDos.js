@@ -31,7 +31,6 @@ function ToDos() {
       </li>
     );
   });
-  console.log(tasks);
   return (
     <div>
       <div className="wrapper">

@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Task = ({ value }) => {
+  const [checked, setChecked] = useState(false);
+
+  const handleCheck = () => {
+    setChecked(!checked);
+  };
+  console.log(checked);
   return (
     <div>
-      <label className="container">
-        {value}
-        <input type="checkbox" />
+      <label className={checked ? `container done` : `container`}>
+        {checked ? <del>{value}</del> : value}
+        <input type="checkbox" onClick={handleCheck} />
         <span className="checkmark"></span>
       </label>
     </div>
