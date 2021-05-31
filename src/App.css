@@ -19,7 +19,7 @@ body {
   background-color: lightgrey;
 }
 .wrapper {
-  width: 250px;
+  width: 300px;
 }
 li {
   list-style-type: none;
@@ -103,4 +103,39 @@ ul {
 }
 .done {
   color: #008080;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-del-edit {
+  display: flex;
+}
+.edit {
+  color: teal;
+  margin-right: 10px;
+}
+.delete {
+  color: red;
+  margin-right: 15px;
+}
+.newTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.newTask input {
+  border: 1px solid lightgray;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 70%;
+}
+.newTask button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  width: 20%;
+  border: 1px solid lightgray;
 }

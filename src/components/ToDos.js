@@ -24,6 +24,18 @@ let tasksList = [
 ];
 function ToDos() {
   const [tasks, setTasks] = useState(tasksList);
+  const [value, setValue] = useState("");
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handleClick = () => {
+    tasks.unshift({ id: idGenerator(), item: value });
+    setTasks(tasks);
+    setValue("");
+  };
+
   let taskList = tasks.map((el) => {
     return (
       <li key={el.id}>
@@ -39,6 +51,10 @@ function ToDos() {
           <span>
             <FontAwesomeIcon icon={faBars} />
           </span>
+        </div>
+        <div className="newTask">
+          <input type="text" value={value} onChange={handleChange} />
+          <button onClick={handleClick}>Add</button>
         </div>
         <ul>{taskList}</ul>
       </div>
