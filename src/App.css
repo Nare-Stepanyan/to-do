@@ -114,10 +114,12 @@ ul {
 .edit {
   color: teal;
   margin-right: 10px;
+  cursor: pointer;
 }
 .delete {
   color: red;
   margin-right: 15px;
+  cursor: pointer;
 }
 .newTask {
   display: flex;
@@ -138,4 +140,5 @@ ul {
   outline: none;
   width: 20%;
   border: 1px solid lightgray;
+  cursor: pointer;
 }

@@ -36,10 +36,21 @@ function ToDos() {
     setValue("");
   };
 
+  const removeTask = (id) => {
+    const newTasks = tasks.filter((task) => task.id !== id);
+    setTasks(newTasks);
+  };
+
+  const editTask = (task) => {};
   let taskList = tasks.map((el) => {
     return (
       <li key={el.id}>
-        <Task value={el.item} />
+        <Task
+          value={el.item}
+          id={el.id}
+          removeTask={removeTask}
+          editTask={editTask}
+        />
       </li>
     );
   });
