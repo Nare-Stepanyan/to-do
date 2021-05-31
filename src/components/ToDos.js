@@ -31,6 +31,7 @@ function ToDos() {
   };
 
   const handleClick = () => {
+    if (!value) return;
     tasks.unshift({ id: idGenerator(), item: value });
     setTasks(tasks);
     setValue("");
